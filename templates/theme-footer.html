@@ -1,8 +1,10 @@
 ## mako
+
 <%! 
   from django.core.urlresolvers import reverse 
   from edxmako.shortcuts import marketing_link
 %>
+<%namespace name='static' file='static_content.html'/>
 <div class="wrapper-footer">
   <footer>
     <div class="colophon">
@@ -12,7 +14,6 @@
           <li><a href="${reverse('tos')}#privacy">Privacy Policy</a></li>
           <li><a href="${reverse('tos')}#honor">Honor Code</a></li>
           <li><a href="${reverse('tos')}#copyright">Copyright</a></li>
-          <li><a href="${reverse('about_edx')}#careers">Careers</a></li>
           <li><a href="${reverse('about_edx')}#contact">Contact</a></li>
           <li><a href="${marketing_link('FAQ')}">Help</a></li>
         </ol>
@@ -28,20 +29,19 @@
   <div class="su-container">
     <div class="su-row">
       <div id="su-footer-logo" class="span2">
-        <!-- <a href="http://www.stanford.edu">
-          <img src="https://www.stanford.edu/su-identity/images/footer-stanford-logo@2x.png" alt="Stanford University" width="105" height="49"/>
-        </a> -->
+        <a href="http://uol.raiuniversity.edu/">
+          <img src="${static.url('themes/rai/images/rai_logo.png')}" alt="Rai University" width="105" height="49"/>
+        </a>
       </div>
       <div id="su-footer-text" class="span10">
         <ul>
           <li class="home"><a href="http://www.raiuniversity.edu/">Rai University</a></li>
-          <li class="maps alt"><a href="#">Maps &amp; Directions</a></li>
           <li class="search-stanford"><a href="#">Search</a></li>
           <li class="terms alt"><a href="#">Terms of Use</a></li>
           <li class="copyright"><a href="#">Copyright Complaints</a></li>
         </ul>
         <div class="clear"></div>
-        <p class="copyright vcard">&copy; <span class="fn org">Rai University</span>, <span class="adr"> <span class="locality">Space City</span>, <span class="region">Badarpur, New Delhi</span> <span class="postal-code">110044</span> </span></p>
+        <p class="copyright vcard">&copy; <span class="fn org">Rai University</span>,</p>
       </div>
       <div style="clear: both;"></div>
     </div>
